@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "VEX Inventory System",
   description:
-    "Professional robotics inventory management - CAD-to-Inventory Pipeline",
+    "Professional robotics inventory management - Multi-team CAD-to-Inventory Pipeline",
 };
 
 export const viewport: Viewport = {
