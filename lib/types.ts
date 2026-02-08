@@ -14,7 +14,7 @@ export interface TeamMember {
   id: string;
   name: string;
   email: string;
-  role: "captain" | "driver" | "builder" | "programmer" | "mentor";
+  role: "captain" | "driver" | "builder" | "programmer" | "mentor" | "notebook";
   avatar?: string;
   joined: string;
 }
@@ -132,5 +132,6 @@ export const ROLES = [
   { value: "driver", label: "Driver" },
   { value: "builder", label: "Builder" },
   { value: "programmer", label: "Programmer" },
+  { value: "notebook", label: "Notebook" },
   { value: "mentor", label: "Mentor" },
 ] as const;

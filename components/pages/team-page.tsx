@@ -42,6 +42,7 @@ import {
   Wrench,
   Code,
   GraduationCap,
+  BookOpen,
   Trash2,
   Edit2,
   Users,
@@ -60,6 +61,7 @@ const roleIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   driver: Gamepad2,
   builder: Wrench,
   programmer: Code,
+  notebook: BookOpen,
   mentor: GraduationCap,
 };
 
@@ -68,6 +70,7 @@ const roleColors: Record<string, string> = {
   driver: "bg-chart-2/10 text-chart-2 border-chart-2/30",
   builder: "bg-primary/10 text-primary border-primary/30",
   programmer: "bg-chart-5/10 text-chart-5 border-chart-5/30",
+  notebook: "bg-chart-3/10 text-chart-3 border-chart-3/30",
   mentor: "bg-muted text-muted-foreground border-border",
 };
 

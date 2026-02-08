@@ -30,6 +30,7 @@ const ROLES = [
   { value: "driver", label: "Driver" },
   { value: "builder", label: "Builder" },
   { value: "programmer", label: "Programmer" },
+  { value: "notebook", label: "Notebook" },
   { value: "mentor", label: "Mentor" },
 ];
 
