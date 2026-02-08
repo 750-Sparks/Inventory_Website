@@ -6,7 +6,8 @@ import { Sidebar } from "@/components/layout/sidebar";
 import { DashboardPage } from "@/components/pages/dashboard-page";
 import { TeamPage } from "@/components/pages/team-page";
 import { FinancesPage } from "@/components/pages/finances-page";
-import { SettingsPage } from "@/components/pages/settings-page";
+import { GettingStarted } from "@/components/getting-started";
+
 import { UploadTab } from "@/components/inventory/upload-tab";
 import { InventoryTab } from "@/components/inventory/inventory-tab";
 import { HistoryTab } from "@/components/inventory/history-tab";
@@ -163,11 +164,20 @@ export default function DashboardRoute() {
         {/* Page Content */}
         <div className="p-6">
           {activePage === "dashboard" && (
-            <DashboardPage
-              inventory={inventory}
-              financialStats={financialStats}
-              recentBuilds={builds}
-            />
+            inventory.length === 0 && builds.length === 0 ? (
+              <GettingStarted
+                team={team}
+                inventory={inventory}
+                builds={builds}
+                onNavigate={setActivePage}
+              />
+            ) : (
+              <DashboardPage
+                inventory={inventory}
+                financialStats={financialStats}
+                recentBuilds={builds}
+              />
+            )
           )}
           {activePage === "inventory" && (
             <div className="animate-fade-in">
@@ -217,7 +227,7 @@ export default function DashboardRoute() {
               builds={builds}
             />
           )}
-          {activePage === "settings" && <SettingsPage />}
+
         </div>
       </main>
     </div>

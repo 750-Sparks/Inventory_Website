@@ -11,7 +11,6 @@ import {
   History,
   Users,
   DollarSign,
-  Settings,
   Cog,
   ChevronLeft,
   ChevronRight,
@@ -158,27 +157,8 @@ export function Sidebar({
           </Tooltip>
         </div>
 
-        {/* Settings & Collapse */}
-        <div className="border-t border-border p-3 space-y-1">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <button
-                onClick={() => onPageChange("settings")}
-                className={cn(
-                  "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200",
-                  "text-muted-foreground hover:text-foreground hover:bg-secondary/80",
-                  activePage === "settings" && "bg-primary/10 text-primary"
-                )}
-              >
-                <Settings className="h-5 w-5 shrink-0" />
-                {!collapsed && <span>Settings</span>}
-              </button>
-            </TooltipTrigger>
-            {collapsed && (
-              <TooltipContent side="right">Settings</TooltipContent>
-            )}
-          </Tooltip>
-
+        {/* Collapse */}
+        <div className="border-t border-border p-3">
           <Button
             variant="ghost"
             size="sm"
